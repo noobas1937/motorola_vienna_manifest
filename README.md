@@ -3,8 +3,7 @@
 - Android 15
 
 ## 1. Create folder & sync repo
-<pre>cd ~/
-mkdir -p Vienna && cd Vienna
+<pre>mkdir -p ~/vienna_kernel && cd ~/vienna_kernel
 repo init -u https://github.com/noobas1937/motorola_vienna_manifest -m default.xml
 repo sync -j$(nproc --all)</pre>
 
