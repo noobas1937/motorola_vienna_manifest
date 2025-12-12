@@ -5,8 +5,8 @@
 ## 1. Create folder & sync repo
 <pre>cd ~/
 mkdir -p Vienna && cd Vienna
-repo init -u https://github.com/nooobas/vienna_kernel_manifest.git -m default.xml
-repo sync -j$(nproc)</pre>
+repo init -u https://github.com/noobas1937/motorola_vienna_manifest -m default.xml
+repo sync -j$(nproc --all)</pre>
 
 ## 2. Create symlinks
 <pre>ln -s kernel_device_modules-6.1 kernel_device_modules-mainline
