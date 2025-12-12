@@ -24,7 +24,7 @@ cp -r kernel_device_modules-6.1/arch/arm64/configs/ext_config/moto-mgk_64_k61-vi
 bazel build //kernel_device_modules-6.1:mgk_64_k61.user</pre>
 
 ## 6. Build Motorola kernel modules
-<pre>export DEFCONFIG_OVERLAYS="ext_config/moto-mgk_64_k61-vienna.config
+<pre>export DEFCONFIG_OVERLAYS="ext_config/moto-mgk_64_k61-vienna.config"
 tools/bazel build   $(bazel query 'filter("mgk_64_k61.6.1.user$", //motorola/kernel/modules/...)')</pre>
 
 ## 7. Clean sources
