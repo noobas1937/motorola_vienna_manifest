@@ -13,8 +13,8 @@ ln -s kernel_device_modules-6.1 kernel_device_modules</pre>
 
 ## 3. Copy vienna config
 <pre>mkdir -p kernel_device_modules-6.1/kernel/configs/ext_config
-cp -r kernel_device_modules-6.1/arch/arm64/configs/ext_config/moto-mgk_64_k61-vienna.config \
-   kernel_device_modules-6.1/kernel/configs/ext_config/moto-mgk_64_k61-vienna.config</pre>
+ln -s ../../../arch/arm64/configs/ext_config/moto-mgk_64_k61-vienna.config \
+      kernel_device_modules-6.1/kernel/configs/ext_config/moto-mgk_64_k61-vienna.config</pre>
 
 ## 4. Build kernel
 <pre>bazel build //kernel-6.1:kernel --//:kernel_version=6.1 --//:internal_config=true</pre>
