@@ -30,7 +30,8 @@ tools/bazel build   $(bazel query 'filter("mgk_64_k61.6.1.user$", //motorola/ker
 ## 7. Build MediaTek modules
 <pre>bazel build \
 $(bazel query 'kind(kernel_module, //vendor/mediatek/kernel_modules/...)' \
-  | grep '\.mgk_64_k61\.6\.1\.user$') \
+ | grep '\.mgk_64_k61\.6\.1\.user$' \
+ | grep -E '6878|mt6878') \
 --//:kernel_version=6.1 \
 --//:internal_config=true</pre>
 
