@@ -27,5 +27,12 @@ bazel build //kernel_device_modules-6.1:mgk_64_k61.user</pre>
 <pre>export DEFCONFIG_OVERLAYS="ext_config/moto-mgk_64_k61-vienna.config"
 tools/bazel build   $(bazel query 'filter("mgk_64_k61.6.1.user$", //motorola/kernel/modules/...)')</pre>
 
+## 7. Build MediaTek modules
+<pre>bazel build \
+$(bazel query 'kind(kernel_module, //vendor/mediatek/kernel_modules/...)' \
+  | grep '\.mgk_64_k61\.6\.1\.user$') \
+--//:kernel_version=6.1 \
+--//:internal_config=true</pre>
+
 ## 7. Clean sources
 <pre>bazel clean --expunge </pre>
