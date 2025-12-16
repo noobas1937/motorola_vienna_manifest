@@ -34,5 +34,5 @@ $(bazel query 'kind(kernel_module, //vendor/mediatek/kernel_modules/...)' \
 --//:kernel_version=6.1 \
 --//:internal_config=true</pre>
 
-## 7. Clean sources
+## Clean sources
 <pre>bazel clean --expunge </pre>
